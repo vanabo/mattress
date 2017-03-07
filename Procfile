@@ -1,1 +1,1 @@
-web: gunicorn parkist.wsgi --log-file -
+web: gunicorn mattress.wsgi --log-file -
