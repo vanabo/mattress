@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+<script>
+{% block jquery %}
+
+// ajax add to cart	
+
+$('.btn.btn-warning').click(function(event){
+	event.preventDefault();
+	var formID = $(this).parent().attr('id')	
+	var formData = $('#' + formID).serialize();
+	console.log(formData);
+	console.log(formID);
+	$.ajax({
+		type: "GET", // "POST"
+		url: "{% url 'cart' %}",
+		data: formData,
+		success: function(data) {
+			showFlashMessage(data.flash_message);
+			updateCartItemCount();
+		}, 
+		error: function(response, error) {
+			// console.log(response)
+			// console.log(error)
+			$('#' + formID).submit()
+		}
+	})
+})
+
+
+{% endblock %}
+</script>
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1 class="text-center">Матрасы</h1>
+
+<div class='FilterForm white-block col-xs-12'>
+<form id="FilterForm" method="GET" action="{% url 'products' %}">
+
+	<div class="form-group col-xs-6 col-sm-2">
+	<label id="price_filter">Цена, руб.</label>   
+	<br> 
+	 <div class="form-price">
+	    <div class="form-row">
+	    <label for="filter.form.min_price.id_for_label">От</label><br>{{ filter.form.min_price }} 
+	    </div>
+	    <div class="form-row">
+	    <label for="filter.form.max_price.id_for_label">До</label><br>{{ filter.form.max_price }}
+	    </div>
+	</div>		    
+	    {{ filter.form.sofa | as_crispy_field }}	    
+	
+	</div>
+
+	<div class="form-group col-xs-6 col-sm-1">      
+	    {{ filter.form.brand | as_crispy_field }}
+	    {{ filter.form.child | as_crispy_field }}
+	</div>	
+	
+	<div class="form-group col-xs-6 col-sm-2">       
+	    {{ filter.form.hardness | as_crispy_field }}
+	</div>
+	
+	<div class="form-group col-xs-6 col-sm-2">      
+	<label for="filter.form.height.id_for_label">Высота матраса, см</label> <br>
+	    {{ filter.form.height }}
+	<br><br>
+	<label for="filter.form.weight.id_for_label">Вес на спальное место, кг</label>  <br>     
+	    {{ filter.form.weight }}
+	</div>
+	
+	<div class="form-group col-xs-6 col-sm-2">      
+	    {{ filter.form.spring | as_crispy_field }}
+	</div>
+	
+	<div class="form-group col-xs-6 col-sm-3">      
+	    {{ filter.form.filler | as_crispy_field }}
+	</div>
+
+
+	<input type='hidden' name='q' value='{{ request.GET.q }}' />
+	<div class="form-group col-xs-12">
+	<button type='submit' class='btn btn-primary btn-sm'>Подобрать матрас</button>
+	<span class="h-20"></span><a href="{% url 'products' %}">Очистить фильтр</a>
+	</div>
+</form>
+</div>
+
+<div class='col-sm-12'>
+
+{% if filter.qs.count == 0 %}
+
+Ничего не найдено по вашим параметрам
+
+{% else %}
+{% include "products/products.html" with object_list=filter.qs %}
+{% endif %}
+
+</div>
+
+{% endblock %}

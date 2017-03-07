@@ -5,30 +5,47 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>{% block head_title %}MVP Landing{% endblock %}</title>
+    <title>{% block head_title %}BedLAB{% endblock %}</title>
 
     {% include 'head_css.html' %}
 
       <style>
       {% block style %}{% endblock %}
       </style>
-
-
-
+      
   </head>
 
   <body>
+
+
   {% include 'navbar.html' %}
+
+{% if messages %}
+
+<div class='container'>
+<div class='alert alert-success text-center alert-dismissible'>
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+{% for message in messages %}
+  <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p><br/>
+  {% endfor %}
+</div>
+
+</div>
+{% endif %}
+
+
 
 {% block jumbotron %}
           
-            {% endblock %}
+{% endblock %}
+
+
     <div class="container">
             
 
@@ -39,9 +56,78 @@
               
 
     </div> <!-- /container -->
-
+   
+    
+    <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+      <div class="blocks-footer">
+      <div class="footer-brand col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12"><div><h2>BedLAB </h2></div> <div> интернет-магазин матрасов, кроватей и постельного белья</div><hr></div>
+    </div>
+    </div>
+      
+       
+      <div class="row">
+      
+        <div class="block-footer col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12">
+          <ul class="list-unstyled">
+            <li>Москва</li>
+            <li class="big-footer"><span class='a-orange'>8 (499) 185 67 67</span></li>
+            <li>Санкт-Петербург</li>
+            <li class="big-footer"><span class='a-orange'>8 (812) 185 67 67</span></li>
+          </ul>
+          
+        </div>
+        <div class="block-footer-3 text-left col-md-3 col-sm-3 col-xs-12">
+          Мы в социальных сетях<br><br>
+          <i class="fa fa-facebook fa-2x"></i><span class="h-20"></span><i class="fa fa-instagram fa-2x"></i>
+        </div>
+        
+        <div class="block-footer-2 col-md-3 col-sm-3 col-xs-12 ">
+        <p>
+        <ul class="list-unstyled">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Гарантии и возврат</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+          </p>
+        </div>       
+        
+        </div>
+        <div class="footer-copyright col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-sm-12">
+        (с) Все права защищены 2017
+        </div>
+        </div>    
+      
+    </div>
+    </footer>
+    
     {% include "javascript.html" %}
     
+    <script>
+    $(document).ready(function(){
+        {% block jquery %}
+        {% endblock %}
+    });
+
+    </script>
     
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

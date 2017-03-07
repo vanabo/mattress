@@ -1,0 +1,37 @@
+<div class="thumbnail text-center">
+<h4><a href='{{ product.get_absolute_url }}'>{{ product.title }}</a></h4>
+	{% if product.get_image_url %}
+	<a href='{{ product.get_absolute_url }}'><img id='img' class='img-responsive' src='{{ product.get_image_url }}' /></a><br/>
+	{% endif %}
+	<form id='add-form-{{ count }}' class='form-inline' method='GET' action="{% url 'cart' %}">
+	
+<p id='jquery-message' class='lead'></p>
+	
+	<input type="hidden" name='item' value='{{ product.variation_set.first.id }}' />
+			<h3 id='price'>{% if product.variation_set.first.sale_price %}
+			{{ product.variation_set.first.sale_price }}<i class="fa fa-rub fa-1x"></i>			 
+			 <small class='og-price'>{{ product.variation_set.first.price }}</small>
+			{% else %}			
+			{{ product.variation_set.first.price }} <i class="fa fa-rub fa-1x"></i>
+			{% endif %}
+		</h3>
+		<br>
+		<div class="form-group form-group-sm">
+		<select name='item' class='form-control variation_select'>
+			{% for vari_obj in product.variation_set.all %}
+			<!-- <option data-img="http://www.spirit1059.com/pics/Feeds/Articles/2015611/118317/Beach.jpg" data-price="{{ vari_obj.price }}" value="{{ vari_obj.id }}">{{ vari_obj }}</option> -->
+			<option  data-sale-price="{{ vari_obj.sale_price }}" data-price="{{ vari_obj.price }}" value="{{ vari_obj.id }}">{{ vari_obj }}</option>
+			{% endfor %}
+		</select>
+		</div>
+	
+	<div class="form-group form-group-sm">
+	<input class='form-control product-qty' type='number' name='qty' value='1' />
+	</div>
+<br><br/>
+
+<button id='submit-btn' type='submit' class='btn btn-warning'>В корзину</button>
+
+</form>	
+</div>
+

@@ -1,58 +1,64 @@
    {% load staticfiles %}
 
    <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid navbar-inverse">
+      <div class="top-line col-lg-2 col-lg-offset-1 col-md-3 col-sm-3 col-xs-6">
+      <i class="fa fa-phone fa-navbar-phone"></i> <span class="hidden-xs">Москва</span> 
+      <span class='a-orange'>8 (499) 185 67 67</span>
+      <span class="visible-xs"><i class="fa fa-phone fa-navbar-phone"></i> <strong><span class='a-orange'>8 (812) 185 67 67</span></strong></span></div>
+      <div class="top-line col-lg-3 col-md-3 col-sm-4 col-xs-3"><span class="hidden-xs"><i class="fa fa-phone fa-navbar-phone"></i> Санкт-Петербург <span class='a-orange'>8 (812) 185 67 67</span></span></div>
+      <div class="top-line text-right col-lg-3 col-md-4 col-sm-2 col-xs-4"><i class="fa fa-th fa-navbar-th"></i> <span class="hidden-xs hidden-md hidden-sm">Ежедневно</span> с 9 до 20 <span class="hidden-xs hidden-sm">часов</span></div>
+      <div class="top-line text-right col-lg-2 col-md-2 col-sm-3 col-xs-2"><span class="hidden-xs hidden-md hidden-sm">Мы в социальных сетях -</span> <i class="fa fa-facebook fa-1x"></i> <i class="fa fa-instagram fa-1x"></i></div>
+    </div>
+      <div class="container navbar-primary">
         <div class="navbar-header">
+          
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/mvp_landing_logo.png' %}" /></a>
+          <a class="navbar-brand" href="{% url 'home' %}">BedLAB</a>
+          <div class="navbar-brand visible-xs">
+              <a href='{% url "cart" %}'><i class="fa fa-shopping-cart fa-navbar-cart"></i> <span id="cart-count-badge" class='badge'>{{ request.session.cart_item_count }}</span></a>
+          </div>          
         </div>
+        
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
+            <li><a href="/products/?category_id=5">Матрасы</a></li>
+            <li><a href="/products/?category_id=6">Постельное белье</a></li>
+            <li><a href="/products/?category_id=7">Кровати</a></li>
+            <li><a href="{% url 'home' %}">Доставка</a></li>
+            <li><a href="{% url 'home' %}">Контакты</a></li>
+            <!-- <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li> -->            
           </ul>
-
 
           <ul class="nav navbar-nav navbar-right">
-          {% if request.user.is_authenticated %}
-            <li><a href="{% url 'auth_logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'registration_register' %}">Register</a></li>
-            {% endif %}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-search fa-navbar-search"></i> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <form class="navbar-form" method="GET" role="search" action='{% url "products" %}'>
+                <div class="input-group">
+                  <input type="text" class="form-control nav-search" placeholder="Название модели" name="q" value='{{ request.GET.q }}'>    
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit">Искать!</button>
+                </span>                
+                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+                </div>
+                </form>      
+              </ul>
+            </li> 
+            <li class='hidden-xs'>
+              <a href='{% url "cart" %}'><i class="fa fa-shopping-cart fa-navbar-cart"></i> <span id="cart-count-badge-1" class='badge'>{{ request.session.cart_item_count }}</span></a>
+            </li> 
+                        
           </ul>
-
-          {% if not request.user.is_authenticated and not "/accounts/login" in request.get_full_path %}
-            <form class='navbar-form navbar-right' method='POST' action='{% url "auth_login" %}'>{% csrf_token %}
-              <div class='form-group'>
-                  <input type='text' class='form-control' name='username' placeholder='Username' /> 
-              </div>
-              <div class='form-group'>
-                  <input type='password' class='form-control' name='password' placeholder='Password' />
-              </div>
-              <button type='submit' class='btn btn-default'>Login</button>
-          </form>
-          {% endif %}
-
-
-        </div><!--/.nav-collapse -->
+        
+        </div>
       </div>
     </nav>

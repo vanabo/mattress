@@ -1,0 +1,1201 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fun",
+				"function"
+			],
+			[
+				"is_",
+				"is_authenticated"
+			],
+			[
+				"per",
+				"permissions"
+			],
+			[
+				"permiss",
+				"permissions"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"de",
+				"decorators"
+			],
+			[
+				"a",
+				"a_new_list"
+			],
+			[
+				"the",
+				"the_list"
+			],
+			[
+				"line",
+				"line_breaks"
+			],
+			[
+				"is",
+				"is_manager"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"redi",
+				"redis_url"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"get",
+				"get_or_create"
+			],
+			[
+				"r",
+				"request"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"border",
+				"border-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"f",
+				"featurette"
+			],
+			[
+				"max",
+				"max_length\tNone"
+			],
+			[
+				"Htt",
+				"HttpResponsePermanentRedirect\tclass"
+			],
+			[
+				"co",
+				"correct_answer"
+			],
+			[
+				"question",
+				"question_type"
+			],
+			[
+				"lo",
+				"login_required\tfunction"
+			],
+			[
+				"Le",
+				"LectureQuestion\tclass"
+			],
+			[
+				"Que",
+				"QuestionAnswerInline"
+			],
+			[
+				"L",
+				"LectureQuestion\tclass"
+			],
+			[
+				"for",
+				"ForeignKey\tclass"
+			],
+			[
+				"se",
+				"settings\tinstance"
+			],
+			[
+				"Lecture",
+				"LectureCompletion\tclass"
+			],
+			[
+				"prev",
+				"prev_item\tstatement"
+			],
+			[
+				"nex",
+				"next_item\tstatement"
+			],
+			[
+				"prv",
+				"prev_item\tstatement"
+			],
+			[
+				"fin",
+				"finished\tstatement"
+			],
+			[
+				"Lec",
+				"LectureCompletion\tclass"
+			],
+			[
+				"le",
+				"lecture_id\tstatement"
+			],
+			[
+				"ne",
+				"new_view\tstatement"
+			],
+			[
+				"con",
+				"conf\tmodule"
+			],
+			[
+				"base",
+				"base_name\tstatement"
+			],
+			[
+				"file",
+				"filename\tstatement"
+			],
+			[
+				"Question",
+				"QuestionManager"
+			],
+			[
+				"Text",
+				"TextInput\tclass"
+			],
+			[
+				"Http",
+				"Http404\tclass"
+			],
+			[
+				"next",
+				"next_page\tstatement"
+			],
+			[
+				"vide",
+				"video_file"
+			],
+			[
+				"us",
+				"username"
+			],
+			[
+				"help",
+				"help_text\t''"
+			],
+			[
+				"vid",
+				"video_file"
+			],
+			[
+				"get_",
+				"get_queryset"
+			],
+			[
+				"new_",
+				"new_slug\tstatement"
+			],
+			[
+				"S3",
+				"S3DirectWidget\tclass"
+			],
+			[
+				"w",
+				"widgets\tmodule"
+			],
+			[
+				"cre",
+				"create_video_tupe\tfunction"
+			],
+			[
+				"fi",
+				"file_string"
+			],
+			[
+				"up",
+				"uploadTo"
+			],
+			[
+				"H",
+				"Http404\tclass"
+			],
+			[
+				"Video",
+				"VideoForm\tclass"
+			],
+			[
+				"Vi",
+				"VideoForm\tclass"
+			],
+			[
+				"PRE",
+				"pre_save\tstatement"
+			],
+			[
+				"Vid",
+				"Video\tclass"
+			],
+			[
+				"get_user",
+				"get_user_model\tfunction"
+			],
+			[
+				"fr",
+				"friends"
+			],
+			[
+				"ip",
+				"ip_overload"
+			],
+			[
+				"email_",
+				"email_user\tstatement"
+			],
+			[
+				"EmailF",
+				"emailfriends"
+			],
+			[
+				"Em",
+				"EmailFriends\tclass"
+			],
+			[
+				"Ema",
+				"EmailSignUp\tclass"
+			],
+			[
+				"x",
+				"x_forwarded_for\tstatement"
+			],
+			[
+				"ref",
+				"ref_id"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"bacg",
+				"background-color"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"j",
+				"jumbotron"
+			],
+			[
+				"data-",
+				"data-toggle"
+			],
+			[
+				"fo",
+				"font-variant"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"Date",
+				"DateTimeField\tclass"
+			],
+			[
+				"Not",
+				"NotificationAdmin\tclass"
+			],
+			[
+				"No",
+				"Notification\tclass"
+			],
+			[
+				"notifi",
+				"notified\tstatement"
+			],
+			[
+				"ses",
+				"ses\tmodule"
+			],
+			[
+				"My",
+				"MyLectureView\tclass"
+			],
+			[
+				"Suggest",
+				"SuggestionManager"
+			],
+			[
+				"Sugg",
+				"SuggestionManager\tclass"
+			],
+			[
+				"date",
+				"datetime\tclass"
+			],
+			[
+				"ke",
+				"key_list\tstatement"
+			],
+			[
+				"password",
+				"password_reset_done"
+			],
+			[
+				"MEDIA",
+				"MEDIA_URL\tstatement"
+			],
+			[
+				"proje",
+				"project\tstatement"
+			],
+			[
+				"key",
+				"key_list_here\tstatement"
+			],
+			[
+				"Project",
+				"ProjectCode\tclass"
+			],
+			[
+				"com",
+				"completed_num"
+			],
+			[
+				"auto_now",
+				"auto_now_add"
+			],
+			[
+				"Dat",
+				"DateTimeField\tclass"
+			],
+			[
+				"comp",
+				"completed\tstatement"
+			],
+			[
+				"coo",
+				"cookie_time"
+			],
+			[
+				"wi",
+				"wistiaEmbed"
+			],
+			[
+				"Subc",
+				"subscribed"
+			],
+			[
+				"new",
+				"newsletter"
+			],
+			[
+				"Projec",
+				"ProjectManager\tclass"
+			],
+			[
+				"Ht",
+				"Http404\tclass"
+			],
+			[
+				"lecu",
+				"lecture_id"
+			],
+			[
+				"chec",
+				"check_user_project\tfunction"
+			],
+			[
+				"API",
+				"ApiKey\timport"
+			],
+			[
+				"AP",
+				"ApiKey"
+			],
+			[
+				"api",
+				"api_key"
+			],
+			[
+				"Aut",
+				"Authorization"
+			],
+			[
+				"Au",
+				"Authentication"
+			],
+			[
+				"v1",
+				"v1_api"
+			],
+			[
+				"User",
+				"UserQuestion\tclass"
+			],
+			[
+				"class",
+				"classmethod\tclass"
+			],
+			[
+				"Lecu",
+				"Lecture\tclass"
+			],
+			[
+				"ex",
+				"exception\tparam"
+			],
+			[
+				"http",
+				"HttpResponseRedirect\tclass"
+			],
+			[
+				"SOCIAL_AUTH_STR",
+				"SOCIAL_AUTH_STRIPE_KEY"
+			],
+			[
+				"pa",
+				"patterns\tfunction"
+			],
+			[
+				"sta",
+				"start_date"
+			],
+			[
+				"url",
+				"urlpatterns\tstatement"
+			],
+			[
+				"UserType",
+				"UserType\tclass"
+			],
+			[
+				"htt",
+				"Http404"
+			],
+			[
+				"wist",
+				"wistia_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/carts/views.py",
+			"settings":
+			{
+				"buffer_size": 7103,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/home.html",
+			"settings":
+			{
+				"buffer_size": 5333,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/javascript.html",
+			"settings":
+			{
+				"buffer_size": 1117,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/products/product_thumbnail.html",
+			"settings":
+			{
+				"buffer_size": 1694,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/products/products.html",
+			"settings":
+			{
+				"buffer_size": 908,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/static_in_pro/our_static/css/custom.css",
+			"settings":
+			{
+				"buffer_size": 1309,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/projects/shop",
+		"/C/projects/shop/src",
+		"/C/projects/shop/src/carts",
+		"/C/projects/shop/src/carts/templates",
+		"/C/projects/shop/src/carts/templates/carts",
+		"/C/projects/shop/src/orders",
+		"/C/projects/shop/src/orders/templates",
+		"/C/projects/shop/src/orders/templates/orders",
+		"/C/projects/shop/src/products",
+		"/C/projects/shop/src/products/templates",
+		"/C/projects/shop/src/products/templates/products",
+		"/C/projects/shop/src/shop",
+		"/C/projects/shop/src/shop/settings",
+		"/C/projects/shop/src/static_in_pro",
+		"/C/projects/shop/src/static_in_pro/our_static",
+		"/C/projects/shop/src/static_in_pro/our_static/css",
+		"/C/projects/shop/src/templates"
+	],
+	"file_history":
+	[
+		"/C/Users/Татьяна/Downloads/ecommerce-2-master/ecommerce-2-master/src/templates/navbar.html",
+		"/C/Users/Татьяна/Downloads/ecommerce-2-master/ecommerce-2-master/src/templates/base.html",
+		"/C/projects/shop/src/templates/base.html",
+		"/C/projects/shop/src/templates/navbar.html",
+		"/C/projects/shop/src/orders/templates/orders/order_summary_short.html",
+		"/C/projects/shop/src/carts/templates/carts/view.html",
+		"/C/projects/shop/src/products/models.py",
+		"/C/projects/shop/src/products/templates/products/product_detail.html",
+		"/C/Users/Татьяна/Downloads/Setup-Templates-Navbar/Setup, Templates & Navbar/index.html",
+		"/C/projects/shop/src/products/views.py",
+		"/C/projects/shop/src/products/templates/products/product_thumbnail.html",
+		"/C/projects/shop/src/orders/views.py",
+		"/C/projects/shop/src/products/templates/products/products.html",
+		"/C/projects/shop/src/shop/urls.py",
+		"/C/projects/shop/src/orders/admin.py",
+		"/C/projects/shop/src/orders/forms.py",
+		"/C/projects/shop/src/orders/models.py",
+		"/C/projects/shop/src/carts/views.py",
+		"/C/projects/shop/src/products/templates/products/product_list.html",
+		"/C/projects/shop/src/products/admin.py",
+		"/C/projects/shop/src/products/urls.py",
+		"/C/projects/shop/src/products/serializers.py",
+		"/C/projects/shop/src/products/forms.py",
+		"/C/projects/ParkistDjangoNew/main/forms.py",
+		"/C/projects/ParkistDjangoNew/main/views.py",
+		"/C/Users/Татьяна/Downloads/ecommerce-2-master/ecommerce-2-master/src/products/views.py",
+		"/C/Users/Татьяна/Downloads/ecommerce-2-master/ecommerce-2-master/src/products/templates/products/products.html",
+		"/C/Users/Татьяна/Downloads/ecommerce-2-master/ecommerce-2-master/src/products/templates/products/product_list.html",
+		"/C/projects/shop/src/shop/settings/local.py",
+		"/C/projects/shop/src/products/templates/products/collection_detail.html",
+		"/C/projects/shop/src/shop/settings/base.py",
+		"/C/projects/shop/src/shop/settings/production.py",
+		"/C/projects/shop/src/manage.py",
+		"/C/projects/shop/src/.gitignore",
+		"/C/projects/shop/src/newsletter/models.py",
+		"/C/projects/shop/src/newsletter/admin.py",
+		"/C/projects/shop/src/carts/models.py",
+		"/C/projects/shop/src/ecommerce2/wsgi.py",
+		"/C/projects/shop/src/ecommerce2/urls.py",
+		"/C/projects/shop/src/ecommerce2/settings/production.py",
+		"/C/projects/shop/src/ecommerce2/settings/local.py",
+		"/C/projects/shop/src/ecommerce2/settings/base.py",
+		"/C/projects/shop/src/ecommerce2/old_settings.py",
+		"/C/Users/Татьяна/Desktop/views.py",
+		"/C/Users/Татьяна/Desktop/models.py",
+		"/C/projects/shop/src/products/templates/products/collections.html",
+		"/C/projects/shop/src/products/urls_categories.py",
+		"/C/projects/shop/src/products/templates/products/brand_detail.html",
+		"/C/projects/shop/src/products/urls_brands.py",
+		"/C/projects/shop/src/products/templates/products/category_thumbnail.html",
+		"/C/projects/shop/src/products/templates/products/brands.html",
+		"/C/projects/shop/src/products/templates/products/brand_list.html",
+		"/C/projects/shop/src/products/urls_collections.py",
+		"/C/projects/shop/src/products/templates/products/collection_thumbnail.html",
+		"/C/projects/shop/src/static_in_pro/our_static/css/custom.css",
+		"/C/projects/shop/src/shop/old_settings.py",
+		"/C/projects/shop/src/shop/wsgi.py",
+		"/C/projects/shop/src/carts/templates/view.html",
+		"/C/projects/shop/src/carts/admin.py",
+		"/C/projects/shop/src/newsletter/views.py",
+		"/C/projects/shop/src/templates/home.html",
+		"/C/projects/shop/src/products/templates/products/category_detail.html",
+		"/C/projects/shop/src/products/templates/products/category_detail",
+		"/C/projects/shop/src/templates/head_css.html",
+		"/C/projects/shop/src/products/templates/products/variation_list.html",
+		"/C/projects/shop/src/products/mixins.py",
+		"/C/projects/shop/src/trydjango18/settings/production.py",
+		"/C/projects/shop/src/trydjango18/settings/local.py",
+		"/C/projects/shop/src/trydjango18/settings/base.py",
+		"/C/projects/shop/src/trydjango18/old_settings.py",
+		"/C/projects/shop/src/trydjango18/wsgi.py",
+		"/C/projects/shop/src/trydjango18/urls.py",
+		"/C/projects/shop/src/newsletter/urls.py",
+		"/C/projects/ParkistDjangoNew/main/urls.py",
+		"/C/projects/shop/Lib/site-packages/registration/backends/default/urls.py",
+		"/C/projects/ParkistDjangoNew/parkist/urls.py",
+		"/C/projects/shop/Lib/site-packages/django/conf/__init__.py",
+		"/C/projects/shop/Lib/site-packages/django/urls/__init__.py",
+		"/C/projects/shop/Lib/site-packages/registration/admin.py",
+		"/C/projects/shop/src/trydjango18/settings.pyc",
+		"/Users/jmitch/Desktop/delete.py",
+		"/Users/jmitch/Desktop/drf/src/comments/views.py",
+		"/Users/jmitch/Desktop/drf/src/accounts/models.py",
+		"/Users/jmitch/Desktop/drf/src/comments/permissions.py",
+		"/Users/jmitch/Desktop/drf/src/videos/permissions.py",
+		"/Users/jmitch/Desktop/drf/src/videos/views.py",
+		"/Users/jmitch/Desktop/drf/src/jquery_test/installation.txt",
+		"/Users/jmitch/Desktop/jquery_test/index.html",
+		"/Users/jmitch/Desktop/jquery_test.html",
+		"/Users/jmitch/Desktop/drf/src/videos/serializers.py",
+		"/Users/jmitch/Desktop/drf/src/srvup/views.py",
+		"/Users/jmitch/Desktop/drf/src/srvup/urls.py",
+		"/Users/jmitch/Desktop/drf/src/srvup/utils.py",
+		"/Users/jmitch/Desktop/drf/src/videos/models.py",
+		"/Users/jmitch/Desktop/30daysofdjango/5_loops.py",
+		"/Users/jmitch/Desktop/30daysofdjango/5_loops",
+		"/Users/jmitch/Desktop/xpytests/sub.py",
+		"/Users/jmitch/Desktop/30daysofdjango/3_math.py",
+		"/Users/jmitch/Desktop/30daysofdjango/2_strings.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/pdfs/tm_details_download.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/accounts/admin.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/team/home.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/team/documents.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/kpj/settings/local.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/kpj/__init__.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/kpj/settings/base.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/Procfile",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/kpj/settings/production.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/kpj/celery.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/questions/views.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/sidebar.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/lectures/all.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/questions/tasks.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/questions/urls.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/accounts/models.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/team/activity.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/kpj/urls.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/teams/urls.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/accounts/urls.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/quiz/views.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/accounts/views.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/teams/views.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/kpj/settings/__init__.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/base.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/quiz/user_results_all.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/questions/models.py",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/templates/questions/all.html",
+		"/Volumes/My Passport/Dropbox/projects/kpj/kpj/lectures/views.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\projects\\shop\\src\\carts",
+			"C:\\projects\\shop\\src\\orders",
+			"C:\\projects\\shop\\src",
+			"<open folders>",
+			"/Users/jmitch/Dropbox/cfe/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"billing",
+			"ecommerce2",
+			"__unicode__",
+			"ecommerce2",
+			"trydjango18",
+			"CORS",
+			"render_to_pdf",
+			"render_to",
+			"TIME_ZONE",
+			"send_mail",
+			"emai",
+			"send_email",
+			"celery",
+			"download",
+			"documents",
+			"login_required",
+			"staticfile",
+			"sidebar",
+			"active",
+			".footer",
+			"option",
+			"href='#",
+			"href=\"#",
+			"join",
+			"md",
+			"pesticide",
+			"td",
+			"pricing",
+			"all",
+			"reset",
+			"next",
+			"video",
+			"model",
+			"embed",
+			"dropdown",
+			"completed",
+			"start",
+			"quiz",
+			"print",
+			"id=",
+			"action",
+			"reverse",
+			"alert",
+			"error",
+			"ask",
+			"questions",
+			"actions",
+			"questions",
+			"transcript",
+			"Lecture",
+			"User",
+			"Lecture",
+			"reply",
+			"min-height",
+			"transcriptText",
+			"transcriptContainer",
+			"transcript",
+			"toggleTrans",
+			"print",
+			"video",
+			"remove",
+			"update",
+			"remove",
+			"url",
+			"hash",
+			"verbose_name",
+			"height",
+			"top",
+			"view",
+			"transcript",
+			"<i",
+			"fa",
+			"transcriptText",
+			"questions",
+			"span",
+			"transcript",
+			":",
+			"currentTime",
+			"cookie",
+			"current",
+			"updated",
+			"questions",
+			"krtoor6jqe",
+			"block",
+			"#wistia",
+			"id",
+			"wistia",
+			"lecture",
+			"wistia",
+			"wisita",
+			"url",
+			"filename",
+			"wistia",
+			"id",
+			"video",
+			"url",
+			"projects",
+			"filename",
+			"password",
+			"favicon",
+			"fav",
+			"bookmark it",
+			"share",
+			"information",
+			"imformation",
+			"people",
+			"someref",
+			"ip",
+			"complete",
+			"danger",
+			"500",
+			"1 month",
+			"download",
+			"progress-bar",
+			"access",
+			"plus",
+			"community",
+			"img",
+			"iphone",
+			"iphoneImg",
+			"img/apple-touch-icon-152-precomposed.png",
+			"static",
+			"unlock",
+			"unlock first",
+			"built",
+			"while we",
+			"jumbo",
+			"form"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"shop",
+			"__str__",
+			"shop",
+			"img/apple-touch-icon-152.png",
+			"{})",
+			"render(request,",
+			"render(",
+			")",
+			"render(request,",
+			"Coding For Entrepreneurs",
+			"CodingForEntrepreneurs.com",
+			"Coding For Entrepreneurs",
+			"CodingForEntrepreneurs.com"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/carts/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6167,
+								6167
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3210.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/templates/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								670,
+								670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 32.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/templates/javascript.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								251
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/products/templates/products/product_thumbnail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1676,
+								1676
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/products/templates/products/products.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 908,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								591
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/static_in_pro/our_static/css/custom.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1304,
+								1304
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 992.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 136.0
+	},
+	"pinned_build_system": "",
+	"project": "shop.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

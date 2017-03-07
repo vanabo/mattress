@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+<script>
+{% block jquery %}
+
+function setPrice(){
+	var price = $(".variation_select option:selected").attr("data-price")
+
+	var sale_price = $(".variation_select option:selected").attr("data-sale-price")
+	if (sale_price != "" && sale_price != "None" && sale_price != null ) {
+	$("#price").html("<h3>" + sale_price + " <small class='og-price'>" + price  + "</small></h3>");
+	} else {
+	$("#price").html(price);
+	}
+}
+setPrice()
+
+$(".variation_select").change(function(){
+	setPrice()
+	// var img = $(".variation_select option:selected").attr("data-img")
+	// $("img").attr("src", img);
+
+})
+
+
+$('#block-short').popover('toggle');
+
+
+// ajax add to cart
+
+$("#submit-btn").click(function(event){
+	event.preventDefault();
+	var formData = $("#add-form").serialize();
+	console.log(formData);
+	$.ajax({
+		type: "GET", // "POST"
+		url: "{% url 'cart' %}",
+		data: formData,
+		success: function(data) {
+			showFlashMessage(data.flash_message);
+			updateCartItemCount();
+		}, 
+		error: function(response, error) {
+			// console.log(response)
+			// console.log(error)
+			$("#add-form").submit()
+		}
+	})
+
+	// $("#add-form").submit()
+
+})
+
+{% endblock %}
+</script>
+
+
+{% block content %}
+
+<div class="row">
+	<div class="col-xs-12 text-center">
+		<h1>Матрас {{ object.title }}</h1>
+	</div>
+</div>
+
+<div class="row">
+<div class='heading col-xs-12'>
+	<div class="col-sm-4 col-xs-6 text-left">
+		<a class="btn btn-default" type='button' href="/products/?category_id=5"><span class="a-orange" ><i class="fa fa-tag fa-1x"></i></span> Вернуться в каталог</a>
+	</div>
+	<div class="col-sm-4 col-sm-offset-4 col-xs-6 text-right">
+		<a class="btn btn-default" type='button' href="/products/?category_id=5"><span class="a-orange" ><i class="fa fa-tag fa-1x"></i></span> Подобрать матрас</a>
+	</div>
+</div>
+</div>
+
+<div class="row">
+<div class="w-20 col-xs-12"></div>
+</div>
+
+
+<div class="row">
+	<div class='col-sm-8'>
+		{% if object.get_image_url %}
+		<div class="block-short">
+			<p>
+			{% if object.material  %}
+			<span class="badge">1</span> {{ object.material }}<br>
+			{% endif %}
+			{% if object.material2  %}
+			<span class="badge">2</span> {{ object.material2 }}<br>
+			{% endif %}
+			{% if object.material3  %}
+			<span class="badge">3</span> {{ object.material3 }}<br>
+			{% endif %}
+			{% if object.material4  %}
+			<span class="badge">4</span> {{ object.material4 }}<br>
+			{% endif %}
+			{% if object.material5  %}
+			<span class="badge">5</span> {{ object.material5 }}<br>
+			{% endif %}
+			{% if object.material6  %}
+			<span class="badge">6</span> {{ object.material6 }}<br>
+			{% endif %}
+			{% if object.material7  %}
+			<span class="badge">7</span> {{ object.material7 }}<br>
+			{% endif %}
+			{% if object.material8  %}
+			<span class="badge">8</span> {{ object.material8 }}<br>
+			{% endif %}
+			{% if object.material9  %}
+			<span class="badge">9</span> {{ object.material9 }}<br>
+			{% endif %}
+			{% if object.material10  %}
+			<span class="badge">10</span> {{ object.material10 }}<br>
+			{% endif %}		
+			</p>
+					
+		</div>
+			
+		<img id='img' class='img-responsive white-block' src='{{ object.get_image_url }}' />
+	</div>
+	{% endif %}
+
+	<div class='col-sm-4 white-block text-center'>
+
+		<form class="form-inline" id='add-form' method='GET' action="{% url 'cart' %}">
+		<p id='jquery-message' class='lead'></p>
+		<p>
+			{% if product.variation_set.count > 1 %}
+			<div class="h3" id='price'>{{ product.variation_set.first.price }}</div><div class="h3" id='price'><i class="fa fa-rub fa-1x"></i></div>
+			</p>
+			<p>Размеры | Цена</p>
+			<div class="form-group">	
+			<select name='item' class='form-control variation_select'>
+				{% for vari_obj in object.variation_set.all %}
+				<!-- <option data-img="http://www.spirit1059.com/pics/Feeds/Articles/2015611/118317/Beach.jpg" data-price="{{ vari_obj.price }}" value="{{ vari_obj.id }}">{{ vari_obj }}</option> -->
+				<option  data-sale-price="{{ vari_obj.sale_price }}" data-price="{{ vari_obj.price }}" value="{{ vari_obj.id }}">{{ vari_obj }} | <span>{{ vari_obj.sale_price }} руб.</span></option> 
+				{% endfor %}
+			</select>
+			</div>
+			{% else %}
+				<input type="hidden" name='item' value='{{ object.variation_set.first.id }}' />
+					<h3 id='price'>{% if object.variation_set.first.sale_price %}
+					{{ object.variation_set.first.sale_price  }} <i class="fa fa-rub fa-1x"></i><br>
+					<small class='og-price'>{{ object.variation_set.first.price }} <i class="fa fa-rub fa-1x"></i></small>
+					{% else %}			
+					{{ object.variation_set.first.price }} <i class="fa fa-rub fa-1x"></i>
+					{% endif %}
+				</h3>
+			
+			{% endif %}
+
+			<div class="form-group">
+			
+			<input class='form-control' id="qty2" type='number' name='qty' value='1' />
+			</div>	
+			<br>
+			<br>
+		<button id='submit-btn' type='submit' class='btn btn-orange btn-lg'>В корзину</button>
+		</form>
+
+		<br/>
+		<hr/>
+		<p>
+		Поделиться с другом<br/>
+		<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,viber,whatsapp,skype,telegram"></div>
+		</p>
+		<hr>
+	</div>
+<!-- End Product Sidebar -->
+</div>
+
+<div class="row">
+<div class="w-20 col-xs-12"></div>
+</div>
+
+<div class="row">
+<div class="white-block col-xs-12">
+	<div class="w-20"></div>
+ 		<h3 class="text-center">Характеристики матраса {{ object.title }}</h3>
+ 			<div class="w-20"></div>
+  			<div class="panel-body">
+	  			<div class="col-sm-6 col-xs-12">
+	    			<p class="lead">{{ object.description }}</p>
+				</div>
+				<div class="col-sm-6 col-xs-12"> 
+				    <table class="table table-striped">
+				    {% if object.brand  %}
+					  <tr><td><strong>Бренд</strong></td><td> {{ object.brand }}</td></tr>
+					  {% endif %}
+					 {% if object.spring  %}
+					  <tr><td><strong>Пружинный блок</strong></td><td> {{ object.spring }}</td></tr>
+					  {% endif %}
+					  {% if object.filler %}
+					  <tr><td><strong>Наполнитель</strong></td><td> {{ object.filler }}</td></tr>
+					  {% endif %}
+					  {% if object.weight  %}
+					  <tr><td><strong>Вес на спальное место, кг</strong></td><td> {{ object.weight }}</td></tr>
+					  {% endif %}
+					  {% if object.height  %}
+					  <tr><td><strong>Высота матраса, см</strong></td><td> {{ object.height }}</td></tr>
+					  {% endif %}
+					  {% if object.hardness  %}
+					  <tr><td><strong>Жёсткость</strong></td><td> {{ object.hardness }}</td></tr>
+					  {% endif %}
+					  {% if object.sofa  %}
+					  <tr><td><strong>Для дивана</strong></td><td> {{ object.sofa }}</td></tr>
+					  {% endif %}
+					  {% if object.child  %}
+					  <tr><td><strong>Детский</strong></td><td> {{ object.child }}</td></tr>
+					  {% endif %}
+					</table>
+				</div>
+  			</div>
+</div>
+</div>
+<div class="row">
+<div class="w-20 col-xs-12"></div>
+</div>
+<div class="row">
+	<h3 class="text-center">Сравните похожие товары</h3>
+	</div>
+	<div class="row">
+<div class="w-20 col-xs-12"></div>
+</div>
+	<div class="row">
+	{% for product in related %}
+
+		<div class='col-xs-12 col-sm-4 col-md-3'>
+			{% include "products/product_thumbnail.html" with product=product price="True" %}
+		</div>
+		{% cycle '' '' '' '' '' '' '</div><div class="row">' %}
+	{% endfor %}
+		</div>
+</div>
+{% endblock %}
+

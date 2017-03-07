@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+
+<script>
+{% block jquery %}
+$(".item-qty").change(function(){
+	// $(this).next(".btn-update").fadeIn();
+
+	// event.preventDefault();
+	// .prev(h1)
+	var item = $(this).prev("input[type='hidden']").val();
+	var qty = $(this).val()
+	var data = {
+		item: item,
+		qty: qty
+	}
+	console.log(data);
+	$.ajax({
+		type: "GET", // "POST"
+		url: "{% url 'cart' %}",
+		data: data,
+		success: function(data) {
+			$("#jquery-message").text("Added " + data.item_added + " Deleted " + data.deleted)
+			if (data.deleted){
+				$("#item-"+item).fadeOut();
+				$("#subtotal").text(data.subtotal);
+				$("#taxtotal").text(data.tax_total);
+				$("#carttotal").text(data.cart_total);
+			} else {
+				$("#item-line-total-"+item).text(data.line_total);
+				$("#subtotal").text(data.subtotal);
+				$("#taxtotal").text(data.tax_total);
+				$("#carttotal").text(data.cart_total);
+			}
+
+			if (data.total_items == 0 ) {
+				$(".table").fadeOut()
+				var template = "{% include 'carts/empty_cart.html' %}";
+				$(".main-content").html(template);
+
+			}
+
+			var message = ""
+			if (data.item_added) {
+				message = "New item added"
+			} else if (data.deleted){
+				message = "Item removed"
+			} else {
+				message = "Item updated"
+			}
+			showFlashMessage(message);
+			updateCartItemCount()
+			}, 
+		error: function(response, error) {
+			// console.log(response)
+			// console.log(error)
+			$("#add-form").submit()
+		}
+	})
+
+
+
+
+
+});
+
+{% endblock %}
+</script>
+
+{% block content %}
+
+
+<div class='row main-content'>
+
+{% if object.cartitem_set.count < 1 %}
+
+{% include "carts/empty_cart.html" %}
+{% else %}
+
+<div class='col-sm-8 col-sm-offset-2'>
+
+<h1>Корзина</h1>
+<table class='table'> 
+
+
+{% for item in object.cartitem_set.all %}
+
+<tr id='item-{{ item.item.id }}'>
+
+<td>{{ item.item.get_title }}</td>
+
+
+<td><form action="." method="GET" ><input type='hidden' name='item' value='{{ item.item.id }}' /><input type='number' class='item-qty' name='qty' value='{{ item.quantity }}' /><input type='submit' class='btn-update btn btn-link' value='Update item' style='display:none;'/></form></td>
+<td id='item-line-total-{{ item.item.id }}'>{{ item.line_item_total }} <i class="fa fa-rub fa-1x"></i></td>
+<td class='text-right' ><a href='{{ item.remove }}'>X</a>
+
+
+
+</td>
+
+
+</tr>
+
+{% endfor %}
+
+
+<tr>
+	<td  colspan='4' class='text-right'>Итого: <span id='subtotal'>{{ object.subtotal }} <i class="fa fa-rub fa-1x"></i></span></td>
+</tr>
+
+<tr>
+	<td colspan='4' class='text-right'>	
+
+	<iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/quickpay/button-widget?account=410014202058370&quickpay=small&any-card-payment-type=on&button-text=02&button-size=m&button-color=orange&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0&default-sum={{ object.subtotal }}&fio=on&mail=on&phone=on&address=on&successURL=url" width="154" height="36"></iframe>
+
+	</td>
+</tr>
+
+</table>
+
+
+</div>
+{% endif %}
+
+</div>
+{% endblock %}
