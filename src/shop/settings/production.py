@@ -1,10 +1,3 @@
-
-#static is here mvpland_static
-#postgresql -- mvpland
-#username -- cfedeploy
-#password -- ##
-
-
 """
 Django settings for shop project.
 
@@ -18,161 +11,159 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import os
 
-from django.conf import settings
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+#root of project
 
-if not settings.DEBUG:
-	import os
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-	BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-	#root of project
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'csqwlmc8s55o($rt6ozh7u+ui9zb-et00w$d90j8$^!nvj41_r'
 
-	# Quick-start development settings - unsuitable for production
-	# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-	# SECURITY WARNING: keep the secret key used in production secret!
-	SECRET_KEY = 'csqwlmc8s55o($rt6ozh7u+ui9zb-et00w$d90j8$^!nvj41_r'
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'https://mattress.herokuapp.com/'
+]
 
-	# SECURITY WARNING: don't run with debug turned on in production!
-	DEBUG = False
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'yourgmail@gmail.com'
+EMAIL_HOST_PASSWORD = 'yourpassword'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
-	ADMINS = (
-		("Justin", "codingforentrepreneurs@gmail.com"),
+''' 
+If using gmail, you will need to
+unlock Captcha to enable Django 
+to  send for you:
+https://accounts.google.com/displayunlockcaptcha
+'''
 
-		)
+# Application definition
 
-	ALLOWED_HOSTS = ['cfedeploy.webfactional.com', 'trydjango.com', 'www.trydjango.com']
-	#purchasing domain name http://name.com
+INSTALLED_APPS = (
+    #django app
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    #third party apps
+    'crispy_forms',
+    'django_filters',
+    'registration',
+    #my apps
+    'carts',
+    'newsletter',
+    'orders',
+    'products',
+)
 
-	EMAIL_HOST = 'smtp.gmail.com'
-	EMAIL_HOST_USER = 'yourgmail@gmail.com'
-	EMAIL_HOST_PASSWORD = 'yourpassword'
-	EMAIL_PORT = 587
-	EMAIL_USE_TLS = True
+MIDDLEWARE_CLASSES = (
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+)
 
-	''' 
-	If using gmail, you will need to
-	unlock Captcha to enable Django 
-	to  send for you:
-	https://accounts.google.com/displayunlockcaptcha
-	'''
+ROOT_URLCONF = 'shop.urls'
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
+WSGI_APPLICATION = 'shop.wsgi.application'
 
-	# Application definition
+# Database
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-	INSTALLED_APPS = (
-	    #django app
-	    'django.contrib.admin',
-	    'django.contrib.auth',
-	    'django.contrib.contenttypes',
-	    'django.contrib.sessions',
-	    'django.contrib.sites',
-	    'django.contrib.messages',
-	    'django.contrib.staticfiles',
-	    #third party apps
-	    'crispy_forms',
-	    'registration',
-	    #my apps
-	    'newsletter',
-	)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
-	MIDDLEWARE_CLASSES = (
-	    'django.contrib.sessions.middleware.SessionMiddleware',
-	    'django.middleware.common.CommonMiddleware',
-	    'django.middleware.csrf.CsrfViewMiddleware',
-	    'django.contrib.auth.middleware.AuthenticationMiddleware',
-	    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-	    'django.contrib.messages.middleware.MessageMiddleware',
-	    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	    'django.middleware.security.SecurityMiddleware',
-	)
+# Internationalization
+# https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-	ROOT_URLCONF = 'shop.urls'
+LANGUAGE_CODE = 'en-us'
 
-	TEMPLATES = [
-	    {
-	        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-	        'DIRS': [os.path.join(BASE_DIR, "templates")],
-	        'APP_DIRS': True,
-	        'OPTIONS': {
-	            'context_processors': [
-	                'django.template.context_processors.debug',
-	                'django.template.context_processors.request',
-	                'django.contrib.auth.context_processors.auth',
-	                'django.contrib.messages.context_processors.messages',
-	            ],
-	        },
-	    },
-	]
+TIME_ZONE = 'UTC'
 
-	WSGI_APPLICATION = 'shop.wsgi.application'
+USE_I18N = True
 
+USE_L10N = True
 
-	# Database
-	# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+USE_TZ = True
 
-	from .db_password import DBPASS
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-	DATABASES = {
-	    'default': {
-	        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	        'NAME': "mvpland",
-	        'USER': "cfedeploy",
-	        'PASSWORD': DBPASS,
-	    }
-	}
+STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
+    
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static_in_pro", "our_static"),
+    #os.path.join(BASE_DIR, "static_in_env"),
+    #'/var/www/static/',
+)
 
-	# Internationalization
-	# https://docs.djangoproject.com/en/1.8/topics/i18n/
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
 
-	LANGUAGE_CODE = 'en-us'
+#Crispy FORM TAGs SETTINGS
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-	TIME_ZONE = 'UTC'
+#DJANGO REGISTRATION REDUX SETTINGS
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
 
-	USE_I18N = True
+#Braintree Payments Details
+BRAINTREE_PUBLIC = "qn3p5n7njksw47r3"
+BRAINTREE_PRIVATE = "d14ac944794c0df1c81991ecf49221ff"
+BRAINTREE_MERCHANT_ID = "n84nynknvzz3j3sz"
+BRAINTREE_ENVIRONEMNT = "Sandbox"
 
-	USE_L10N = True
-
-	USE_TZ = True
-
-
-	# Static files (CSS, JavaScript, Images)
-	# https://docs.djangoproject.com/en/1.8/howto/static-files/
-
-	STATIC_URL = '/static/'
-
-	STATIC_ROOT = '/home/cfedeploy/webapps/mvpland_static/'
-	#os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
-	    
-	STATICFILES_DIRS = (
-	    os.path.join(BASE_DIR, "static_in_pro", "our_static"),
-	    #os.path.join(BASE_DIR, "static_in_env"),
-	    #'/var/www/static/',
-	)
-
-	MEDIA_URL = '/media/'
-	MEDIA_ROOT = '/home/cfedeploy/webapps/mvpland_media/'
-	#os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
-
-
-	#Crispy FORM TAGs SETTINGS
-	CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
-
-	#DJANGO REGISTRATION REDUX SETTINGS
-	ACCOUNT_ACTIVATION_DAYS = 7
-	REGISTRATION_AUTO_LOGIN = True
-	SITE_ID = 1
-	LOGIN_REDIRECT_URL = '/'
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}
 
 
 
-	REST_FRAMEWORK = {
-	    'DEFAULT_FILTER_BACKENDS': (
-	        'django_filters.rest_framework.DjangoFilterBackend',
-	        ...
-	    ),
-	}
+
+
+
+
+
+
+
+
+
 
